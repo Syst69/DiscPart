@@ -30,10 +30,10 @@ client.once(Events.ClientReady, client => {
 
 
 const IGNORE_PREFIX = "!"
-const CHANNELS = ["1170579303205969983"]
+const CHANNELS = ["Guild_Channel_Id"]
 
 const openai = new OpenAI({
-  apiKey: "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"
+  apiKey: "OpenAi_Api"
 });
 
 client.on('messageCreate', async (message) => {
