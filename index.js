@@ -33,7 +33,7 @@ const IGNORE_PREFIX = "!"
 const CHANNELS = ["Guild_Channel_Id"]
 
 const openai = new OpenAI({
-  apiKey: "OpenAi_Api"
+  apiKey: process.env.OPENAI_SECRET
 });
 
 client.on('messageCreate', async (message) => {
@@ -107,4 +107,4 @@ message.reply(response.choices[0].message.content);
 
 
 
-client.login("MTE2ODE0ODA5MDU0MTMxNDE0OA.GunXEo.OCg5irm4Tcbt6-zN9mLdRcnotYadw4KEqLmAaw")
+client.login(process.env.TOKEN)
